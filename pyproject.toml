@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "auth-system"
+version = "0.1.0"
+description = "User authentication and management system API"
+authors = ["OpenHands <openhands@all-hands.dev>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.1"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.0"
+gunicorn = "^21.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-django = "^4.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
