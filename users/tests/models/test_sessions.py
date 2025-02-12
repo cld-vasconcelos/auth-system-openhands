@@ -1,11 +1,10 @@
-import pytest
+from django.test import TestCase
 from django.utils import timezone
 from datetime import timedelta
 from users.models import User, Session
 
 
-@pytest.mark.django_db
-class TestSession:
+class TestSession(TestCase):
     def test_session_creation(self):
         user = User.objects.create_user(
             email="test@example.com",

@@ -1,10 +1,10 @@
-import pytest
+from django.test import TestCase
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-@pytest.mark.django_db
-class TestUserModel:
+
+class TestUserModel(TestCase):
     def test_create_user(self):
         user = User.objects.create_user(
             email='test@example.com',

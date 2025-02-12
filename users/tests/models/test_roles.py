@@ -1,9 +1,8 @@
-import pytest
+from django.test import TestCase
 from users.models import Role
 
 
-@pytest.mark.django_db
-class TestRole:
+class TestRole(TestCase):
     def test_role_creation(self):
         role = Role.objects.create(name="Admin")
         assert str(role) == "Admin"

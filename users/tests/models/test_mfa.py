@@ -1,9 +1,8 @@
-import pytest
+from django.test import TestCase
 from users.models import User, MFADevice
 
 
-@pytest.mark.django_db
-class TestMFADevice:
+class TestMFADevice(TestCase):
     def test_mfa_device_creation(self):
         user = User.objects.create_user(
             email="test@example.com",

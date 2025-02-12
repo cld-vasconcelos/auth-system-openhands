@@ -1,9 +1,8 @@
-import pytest
+from django.test import TestCase
 from users.models import User, Role, UserRole
 
 
-@pytest.mark.django_db
-class TestUserRole:
+class TestUserRole(TestCase):
     def test_user_role_creation(self):
         user = User.objects.create_user(
             email="test@example.com",
