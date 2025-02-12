@@ -1,0 +1,28 @@
+# OpenHands Instructions
+
+## Overview
+This is a Python repository for user authentication and management system API built using the Django framework.
+
+## Instructions for OpenHands AI Agent
+1. **Setup Development Environment**: Run `poetry install --no-root` to install the required packages for the project before making any changes. Ensure all dependencies are properly installed.
+2. **Understand the Problem Statement**: Carefully read the problem statement provided in the issue description.
+3. **Identify the Files to Modify**: Determine which files need to be created or modified to address the issue.
+4. **Implement the Solution**: Make the necessary code changes to solve the problem. Run the command `make migrations` to create the necessary database migration files, never update already existing migration files unless explicitly requested.
+5. **Describe Changes**: Clearly describe the changes made to solve each step of the issue.
+6. **Documentation**: Update any relevant documentation to reflect the changes made.
+7. **Completion**: Once the issue is resolved, mark the task as complete.
+8. **Provide Evidence**: Include the file path and content of the created or modified files in the completion message to provide evidence of the changes made.
+
+## Best Practices
+- Maintain clear and concise code.
+- Follow Python coding standards and best practices.
+- Ensure all code is well-documented.
+- Write meaningful commit messages.
+
+## Testing
+- Write appropriate tests to ensure the applied changes are covered. Place these tests in the photo/tests directory.
+- Testing is not required as part of the workflow. Write the tests but skip executing them.
+
+## Final Steps
+- After completing the changes, finalize the task by marking it as complete.
+- Provide evidence of the changes by including the file path and content of the created or modified files in the completion message.
