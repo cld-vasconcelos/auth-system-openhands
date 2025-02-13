@@ -23,6 +23,8 @@ from .serializers import (
 User = get_user_model()
 
 class RegisterView(APIView):
+    permission_classes = [permissions.AllowAny]
+
     @method_decorator(ratelimit(key='ip', rate='5/m', method=['POST']))
     def post(self, request):
         serializer = UserRegistrationSerializer(data=request.data)
@@ -35,6 +37,8 @@ class RegisterView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class LoginView(APIView):
+    permission_classes = [permissions.AllowAny]
+
     @method_decorator(ratelimit(key='ip', rate='5/m', method=['POST']))
     def post(self, request):
         serializer = UserLoginSerializer(data=request.data)
@@ -112,6 +116,8 @@ class LogoutView(APIView):
             )
 
 class PasswordResetView(APIView):
+    permission_classes = [permissions.AllowAny]
+
     @method_decorator(ratelimit(key='ip', rate='3/m', method=['POST']))
     def post(self, request):
         serializer = PasswordResetRequestSerializer(data=request.data)
@@ -145,6 +151,8 @@ class PasswordResetView(APIView):
             )
 
 class PasswordResetConfirmView(APIView):
+    permission_classes = [permissions.AllowAny]
+
     def post(self, request):
         serializer = PasswordResetConfirmSerializer(data=request.data)
         if not serializer.is_valid():
