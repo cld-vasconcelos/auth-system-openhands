@@ -20,3 +20,6 @@ run:
 
 test:
 	poetry run python manage.py test
+
+create-superuser:
+	DJANGO_SUPERUSER_PASSWORD=admin poetry run python manage.py createsuperuser --noinput --username=admin --email=admin@example.com
