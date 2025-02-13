@@ -102,14 +102,7 @@ docker-compose down
 To run the test suite:
 
 ```sh
-# Using Make
 make test
-
-# Using Docker
-docker-compose run --rm web python manage.py test
-
-# Using Poetry
-poetry run python manage.py test
 ```
 
 ## API Documentation
@@ -141,25 +134,6 @@ To create a superuser account:
 ```sh
 make create-superuser
 ```
-
-## Environment Variables
-
-Create a `.env` file in the project root with the following variables:
-
-```env
-DEBUG=True
-SECRET_KEY=your-secret-key
-DATABASE_URL=postgres://user:password@localhost:5432/dbname
-ALLOWED_HOSTS=localhost,127.0.0.1
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
 
 ## License
 
